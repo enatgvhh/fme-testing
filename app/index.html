@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>Report FME Workbench Test</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+		<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+		
+		<LINK REL="STYLESHEET" TYPE="text/css" HREF="css/index.css">
+		
+		<script type="text/javascript">				
+		$(document).ready(function() {
+			var table = $('#example').DataTable( {
+				ajax: {
+					url: "data/testResult.json",
+					dataSrc: ''
+				},
+				columns: [
+					{ "data": "Workbench" },
+					{ "data": "Start-Zeit" },
+					{ "data": "Start-Reader-Count" },
+					{ "data": "Start-Writer-Count" },
+					{ "data": "Start-Success" },
+					{ "data": "Start-Warning" },
+					{ "data": "Start-Duration" },
+					{ "data": "Start-Error" },
+					{ "data": "End-Zeit" },
+					{ "data": "End-Reader-Count" },
+					{ "data": "End-Writer-Count" },
+					{ "data": "End-Success" },
+					{ "data": "End-Warning" },
+					{ "data": "End-Duration" },
+					{ "data": "End-Error" },
+					{ "data": "Prozent-Reader" },
+					{ "data": "Prozent-Writer" },
+					{ "data": "Status" }
+				]
+			} );
+			
+			$('#example tbody').on( 'click', 'tr', function () {	
+				if ( $(this).hasClass('selected') ) {
+					$(this).removeClass('selected');
+				}
+				else {
+					table.$('tr.selected').removeClass('selected');
+					$(this).addClass('selected');						
+				}
+			} );		 			
+		} );								
+		</script>
+	</head>
+	<body>	
+	<table id="example" class="display" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>Workbench</th>
+				<th>Start-Zeit</th>
+                <th>Start-Reader-Count</th>
+				<th>Start-Writer-Count</th>
+				<th>Start-Success</th>
+				<th>Start-Warning</th>
+				<th>Start-Duration</th>
+				<th>Start-Error</th>
+				<th>End-Zeit</th>
+				<th>End-Reader-Count</th>
+				<th>End-Writer-Count</th>
+				<th>End-Success</th>
+				<th>End-Warning</th>
+				<th>End-Duration</th>
+				<th>End-Error</th>
+				<th>Prozent-Reader</th>
+				<th>Prozent-Writer</th>
+				<th>Status</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <th>Workbench</th>
+				<th>Start-Zeit</th>
+                <th>Start-Reader-Count</th>
+				<th>Start-Writer-Count</th>
+				<th>Start-Success</th>
+				<th>Start-Warning</th>
+				<th>Start-Duration</th>
+				<th>Start-Error</th>
+				<th>End-Zeit</th>
+				<th>End-Reader-Count</th>
+				<th>End-Writer-Count</th>
+				<th>End-Success</th>
+				<th>End-Warning</th>
+				<th>End-Duration</th>
+				<th>End-Error</th>
+				<th>Prozent-Reader</th>
+				<th>Prozent-Writer</th>
+				<th>Status</th>
+            </tr>
+        </tfoot>
+	</table>
+	</body>
+</html>
