@@ -45,7 +45,7 @@ Zusätzlich berechnen wir 2 neue Attribute, und zwar die relative Häufigkeit de
 Mit der minimalen [HTML/JS-WebApp](app) wird das erzeugte JSON-File über eine 
 [DataTables](https://datatables.net/) Instanz visualisiert. Die App sollte aufgrund der CORS Restriktion auf einem WebServer liegen.
 
-![ report.jpg](img/report.jpg)
+![report.jpg](img/report.jpg)
 Abb. 1: FME Test Report
 
 
