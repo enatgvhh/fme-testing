@@ -22,7 +22,7 @@ class Compare:
         self.logEnd = logEnd
         self.__events = []
         
-    def compare(self):
+    def compare(self) -> pd.DataFrame:
         """Methode compare fuehrt einen Vergleich zwischen 2 Objekten der Klasse LogEvents aus
         und gibt eien pandas DataFrame mit den Informationen zurueck.
         

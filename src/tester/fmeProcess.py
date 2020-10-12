@@ -8,17 +8,15 @@ import logging
 class FmeProcess:
     """Klasse FmeProcess dient dazu, um eine FME-Workbenche ueber einen Subprocess laufen zu lassen."""
     
-    def __init__(self, fmepath: str, logFile: str):
+    def __init__(self, fmepath: str, logger: logging.Logger):
         """Konstruktor der Klasse FmeProcess.
         
         Args:
             fmepath: String mit Path zur fme.exe
-            logFile: Sting mit LogFile.log
+            logger: Objekt logging.Logger
         """
         self.__fmepath = fmepath
-        self.__logFile = logFile       
-        logging.basicConfig(filename=logFile, format='%(asctime)s - %(levelname)s - %(message)s', level=logging.DEBUG)
-        self.__logger = logging.getLogger('loggerFme')
+        self.__logger = logger
         
     def callFmeProcess(self, wb: str):
         """Methode startet den FME Subprocess.
