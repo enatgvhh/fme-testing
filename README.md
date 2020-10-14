@@ -18,7 +18,7 @@ In diesem Beitrag geht es ausschließlich um das automatisierte Testen von FME-W
 
 
 ## FME Test Workspace
-Um eine FME Workbench zu testen, müssen wir sie ausführen. Dabei wollen wir natürlich nicht in die Zieldatenbanken schreiben. Deshalb kopieren wir unsere fmw-Files in einen Testorder und ersetzen in jedem File, die Writer durch den Custom Transformer [Testing](fme), der letztendlich nur die zu schreibenden Objekte zählt und als *Total Count* in das Logfile schreibt. Dieses Logfile ist unser *Soll-Zustand*. Beim automatisierten Testen werden als erstes die Parameter aus diesem ursprünglichen Logfile eingelesen, dann wird die Test-Workbench erneut ausgeführt und die Parameter aus dem neuen Logfile mit dem Soll-Zustand verglichen.
+Um eine FME Workbench zu testen, müssen wir sie ausführen. Dabei wollen wir natürlich nicht in die Zieldatenbanken schreiben. Deshalb kopieren wir unsere fmw-Files in einen Testorder und ersetzen in jedem File, die Writer durch den Custom Transformer [Testing](https://hub.safe.com/publishers/enatgvhh/transformers/testing), der letztendlich nur die zu schreibenden Objekte zählt und als *Total Count* in das Logfile schreibt. Dieses Logfile ist unser *Soll-Zustand*. Beim automatisierten Testen werden als erstes die Parameter aus diesem ursprünglichen Logfile eingelesen, dann wird die Test-Workbench erneut ausgeführt und die Parameter aus dem neuen Logfile mit dem Soll-Zustand verglichen.
 
 
 ## Python Package Tester
